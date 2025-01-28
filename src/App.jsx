@@ -1,34 +1,42 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import { useState } from 'react';
+import { LanguageProvider } from './localization/LanguageContext';
+import { ThemeProvider } from './theme/ThemeContext';
+import { useLanguage } from './localization/LanguageContext';
+import Navbar from './components/Navbar/Navbar';
+import './App.css';
 
-function App() {
-  const [count, setCount] = useState(0)
+const AppContent = () => {
+  const [count, setCount] = useState(0);
+  const { t } = useLanguage();
 
   return (
-    <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
+    <div className="app-container">
+      <Navbar />
+      <div className="content">
+        <h1>{t('title')}</h1>
+        <div className="card">
+          <button onClick={() => setCount((count) => count + 1)}>
+            {t('countText')} {count}
+          </button>
+          <p>
+            {t('editText')} <code>src/App.jsx</code> {t('andSaveText')}
+          </p>
+        </div>
+        <p className="read-the-docs">
+          {t('learnMoreText')}
         </p>
       </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
+    </div>
+  );
+};
+
+function App() {
+  return (
+    <ThemeProvider>
+      <LanguageProvider>
+        <AppContent />
+      </LanguageProvider>
+    </ThemeProvider>
   )
 }
 
