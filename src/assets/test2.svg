@@ -1,0 +1,42 @@
+<!-- ornament.svg: four identical squares (side = 4) arranged as in the original figure -->
+<svg
+    xmlns="http://www.w3.org/2000/svg"
+    width="200"
+    height="200"
+    viewBox="-4 -11 13 13"
+    stroke="black"
+    fill="none"
+    stroke-width="0.05"
+>
+  <!-- Square 1 -->
+  <polygon points="
+    0,0
+    2.828,-2.828
+    0,-5.656
+    -2.828,-2.828
+  "/>
+  
+  <!-- Square 2 -->
+  <polygon points="
+    1.414,-1.414
+    4.242,-4.242
+    1.414,-7.07
+    -1.414,-4.242
+  "/>
+  
+  <!-- Square 3 -->
+  <polygon points="
+    2.828,-2.828
+    5.656,-5.656
+    2.828,-8.484
+    0,-5.656
+  "/>
+  
+  <!-- Square 4 -->
+  <polygon points="
+    4.242,-4.242
+    7.07,-7.07
+    4.242,-9.898
+    1.414,-7.07
+  "/>
+</svg>

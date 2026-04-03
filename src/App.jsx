@@ -5,6 +5,9 @@ import { useLanguage } from './localization/LanguageContext';
 import Navbar from './components/Navbar/Navbar';
 import './App.css';
 
+import test1 from './assets/test1.svg';
+import test2 from './assets/test2.svg';
+
 const AppContent = () => {
   const [count, setCount] = useState(0);
   const { t } = useLanguage();
@@ -14,6 +17,9 @@ const AppContent = () => {
       <Navbar />
       <div className="content">
         <h1>{t('title')}</h1>
+        <img src={test1} className="navbar-logo" alt="test1" />
+        <img src={test2} className="navbar-logo" alt="test2" />
+       
         <div className="card">
           <button onClick={() => setCount((count) => count + 1)}>
             {t('countText')} {count}

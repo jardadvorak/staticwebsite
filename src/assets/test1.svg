@@ -1,0 +1,30 @@
+<!-- figZ6-I-5.svg: Four shapes made of identical triangles (schematic only). 
+     "Poznámka: obrázek je pouze ilustrační." -->
+<svg
+    xmlns="http://www.w3.org/2000/svg"
+    width="400"
+    height="120"
+    viewBox="0 0 20 5"
+    fill="none"
+    stroke="black"
+    stroke-width="0.05"
+>
+  <!-- Shape A: small parallelogram (upper-left), diagonal from top-left to bottom-right -->
+  <polygon points="0,0 2,0 3,2 1,2"/>
+  <line x1="0" y1="0" x2="3" y2="2"/>
+  
+  <!-- Shape B: another parallelogram (lower-left), diagonal -->
+  <polygon points="5,0 8,0 9,2 6,2"/>
+  <line x1="5" y1="0" x2="9" y2="2"/>
+  
+  <!-- Shape C: larger polygon in the center with two interior lines (approx.) -->
+  <!-- Outer boundary: a hex‐like shape -->
+  <polygon points="10,0 14,0 15,2 14,3 11,3 10,2"/>
+  <!-- Two internal diagonals -->
+  <line x1="10" y1="2" x2="14" y2="0"/>
+  <line x1="10" y1="2" x2="14" y2="3"/>
+  
+  <!-- Shape D: rhombus on the right, diagonal from top to bottom -->
+  <polygon points="16,1 17,0 18,1 17,2"/>
+  <line x1="17" y1="0" x2="17" y2="2"/>
+</svg>
